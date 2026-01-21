@@ -1,0 +1,20 @@
+'''
+Preserves insertion order of list
+'''
+numbers = [10, 5, 20, 8,15,10, 8]
+
+count={}
+for num in numbers:
+    if num in count:
+        count[num]+=1
+    else:
+        count[num]=1
+print(count)
+
+duplicates=[]
+for num in count:
+    if count[num]>1:
+    #print(count[num])
+        duplicates.append(num)
+
+print(duplicates)
